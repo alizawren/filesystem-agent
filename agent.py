@@ -56,7 +56,7 @@ class Agent:
 
         self.workspace = workspace.resolve()
         self.client = genai.Client(api_key=api_key)
-        self.model = model or os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
+        self.model = model or os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
         self.max_steps = max_steps
         self.tools = _build_tools()
         self.contents: list[types.Content] = []
